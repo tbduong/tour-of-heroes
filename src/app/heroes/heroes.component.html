@@ -1,9 +1,12 @@
-<h2>{{hero.name | uppercase}} Details</h2>
-<p><strong>Hero ID: </strong>{{hero.id}}</p>
+<h2> Hall of Heroes </h2>
+<div class="">
+  <ul class="heroes">
+    <!--*ngFor is a repeater directive.. repeats the host element-->
+    <!--heroes holds the mock heroes list from the HeroesComponent class-->
+    <!--hero holds the current hero object for each iteration-->
 
-  <!--[(ngModel)]  is Two way binding; binds hero.name property tho this HTML textbox so data can flow in both directions -->
-<div>
-  <label>name:
-    <input [(ngModel)]="hero.name" placeholder="name"/>
-  </label>
+    <li *ngFor="let hero of heroes ">
+      <p class="badge">{{hero.id}}</p> <span>{{hero.name}}</span>
+    </li>
+  </ul>
 </div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-//import the hero interface from the hero.ts
+//import the hero data interface from the hero.ts
 import { Hero } from '../hero';
+//import the HEROES data from the mock-heroes.ts
+import { HEROES } from '../mock-heroes';
 
 
 @Component({
@@ -11,10 +13,13 @@ import { Hero } from '../hero';
 export class HeroesComponent implements OnInit {
 //Add code here
 //Creates Hero object
-hero: Hero = {
-   id: 1,
-   name: 'Windstorm'
- };
+// hero: Hero = {
+//    id: 1,
+//    name: 'Windstorm'
+//  };
+
+//heroes will be called in repeater iterator
+ heroes = HEROES;
 
   constructor() { }
 
